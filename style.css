@@ -1,7 +1,20 @@
-/*
-font-family: 'Space Mono', monospace;
-font-family: 'Tulpen One', cursive;
-*/
+@import url('https://fonts.googleapis.com/css2?family=Macondo&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Tangerine:wght@400;700&display=swap');
+
+:root {
+    --typewriter: 'Space Mono', monospace;
+    --handwriter: 'Tangerine', cursive;
+    --scriptwriter: 'Macondo', cursive;
+}
+
+/* Google Icon Default Style */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+/*****************************/
 
 .background {
     box-shadow: 2px 3px 20px black, 0 0 125px #8f5922 inset;
@@ -15,32 +28,41 @@ font-family: 'Tulpen One', cursive;
 }
 
 .title {
-    font-family: 'Tulpen One', cursive;
+    font-family: var(--handwriter);
     font-size: 5rem;
     text-align: center;
 }
 
 .subtitle {
-    font-family: 'Tulpen One', cursive;
+    font-family: var(--handwriter);
     font-size: 3rem;
     text-align: center;
 }
 
 body {
-    font-family: 'Space Mono', monospace;
+    font-family: var(--scriptwriter);
+    font-size: 1.5rem;
     text-align: justify;
     padding: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 button {
-    font-family: 'Space Mono', monospace
+    font-family: var(--typewriter);
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .hero-image {
-    width: 85vw;
+    width: -webkit-fill-available;;
     margin-left: auto;
     margin-right: auto;
-    display: block;
 }
 
 .story-buttons {
@@ -51,11 +73,20 @@ button {
 .story-button {
     width: 25vw;
     height: 3rem;
-    text-align: center;
-    font-size: .8rem;
+    font-size: 1rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;;
+}
+
+.category-action-active {
+    font-size: 1.1rem;
+    color: black;
+    transition: all 0.2s ease-in-out;
+}
+
+.category-action-inactive {
+    font-size: 1rem;
+    color: grey;
+    transition: all 0.2s ease-in-out;
 }
 
 .button-grid {
@@ -65,14 +96,23 @@ button {
     padding-bottom: .5rem;
 }
 
-.category-button, .subcategory-button {
-    background-color: #f0f0f0;
-    border: none;
-    padding: 1rem;
-    cursor: pointer;
-    text-align: center;
+.category-button, .subcategory-button, .category-reset-button {
+    font-size: 1rem;
+    height: 4rem;
+    justify-content: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
     overflow: hidden;
+}
+
+.category-button.active {
+    text-shadow: 
+    1px 0px 1px #ccc, 0px 1px 1px #eee, 
+    2px 1px 1px #ccc, 1px 2px 1px #eee,
+    3px 2px 1px #ccc, 2px 3px 1px #eee,
+    4px 3px 1px #ccc, 3px 4px 1px #eee,
+    5px 4px 1px #ccc, 4px 5px 1px #eee,
+    6px 5px 1px #ccc, 5px 6px 1px #eee,
+    7px 6px 1px #ccc;
 }
 
 .category-button.collapsed {
