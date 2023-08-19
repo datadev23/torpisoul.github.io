@@ -19,7 +19,7 @@
         <div>
             <h1 class="title">ClueCraft</h1>
             <h2 class="subtitle">A classic murder mystery, with a modern twist!</h2>
-            <h4 class="main-paragraph">Have you ever wanted to star in your very own murder mystery without knowing whodunnit? Craft your own mystery and invite others to help you discover the clues, with ClueCraft.</h4>
+            <p class="main-paragraph">Have you ever wanted to star in your very own murder mystery without knowing whodunnit? Craft your own mystery and invite others to help you discover the clues, with ClueCraft.</p>
         </div>
 
         <div>
@@ -31,35 +31,28 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <div>
-            <div>
-                <button><span class="fa-solid fa-plus"></span> Add</button>
-                <button><span class="fa-solid fa-pen-to-square"></span> Edit</button>
-                <button><span class="fa-solid fa-trash"></span> Delete</button>
+            <div class="story-buttons">
+                <button class="story-button add-story-button"><span class="fa-solid fa-plus"></span> Add</button>
+                <button class="story-button edit-story-button"><span class="fa-solid fa-pen-to-square"></span> Edit</button>
+                <button class="story-button delete-story-button"><span class="fa-solid fa-trash"></span> Delete</button>
             </div>
             <br>
-            <div>
-                <select class="select-category" name="Categories" id="category">
-                    <option value="" disabled selected>Choose a Category</option>
-                    <option value="Character">Characters</option>
-                    <option value="Character Description">Character Descriptions</option>
-                    <option value="Character Relationships">Character Relationships</option>
-                    <option value="Clues">Clues</option>
-                    <option value="Evidence">Evidence</option>
-                    <option value="Motive">Motive</option>
-                    <option value="Players">Players</option>
-                    <option value="Red Herons">Red Herons</option>
-                    <option value="Theme">Theme</option>
-                </select>
-                <br><br>
-                <select class="select-subcategory" id="subcategory">
-                    <option value="">Choose a Sub-Category</option>
-                </select>
-                <br><br>
-                <button>
-                    <i class="fa-solid fa-paper-plane"></i>
-                <input type="submit" value="Submit" class="submit-button-inner">
-                </button>        
+            <div class="button-grid" id="category">
+                <button class="category-reset-button" disabled>Go back</button>
+                <button class="category-button" data-value="characters">Characters</button>
+                <button class="category-button" data-value="characterTraits">Character Traits</button>
+                <button class="category-button" data-value="relationships">Relationships</button>
+                <button class="category-button" data-value="clues">Clues</button>
+                <button class="category-button" data-value="evidence">Evidence</button>
+                <button class="category-button" data-value="motive">Motive</button>
+                <button class="category-button" data-value="players">Players</button>
+                <button class="category-button" data-value="redHerons">Red Herons</button>
+                <button class="category-button" data-value="theme">Theme</button>
             </div>
+            <div class="button-grid" id="subcategory">
+
+            </div>
+            
         </div>          
         <!--Custom JS file-->
         <footer>

@@ -16,23 +16,68 @@ font-family: 'Tulpen One', cursive;
 
 .title {
     font-family: 'Tulpen One', cursive;
-    font-size: 5em;
+    font-size: 5rem;
+    text-align: center;
 }
 
 .subtitle {
     font-family: 'Tulpen One', cursive;
-    font-size: 3em;
+    font-size: 3rem;
+    text-align: center;
 }
 
 body {
     font-family: 'Space Mono', monospace;
+    text-align: justify;
+    padding: 1rem;
+}
+
+button {
+    font-family: 'Space Mono', monospace
 }
 
 .hero-image {
-    width: 50vw;
+    width: 85vw;
     margin-left: auto;
     margin-right: auto;
     display: block;
+}
+
+.story-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.story-button {
+    width: 25vw;
+    height: 3rem;
+    text-align: center;
+    font-size: .8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: .5rem;
+    padding-bottom: .5rem;
+}
+
+.category-button, .subcategory-button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    overflow: hidden;
+}
+
+.category-button.collapsed {
+    display: none;
+    pointer-events: none;
 }
 
 .submit-button-inner {
