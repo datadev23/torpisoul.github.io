@@ -137,16 +137,41 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
             button.classList.remove("collapsed");
+            button.classList.add("active");
         });
     });
 
     resetButton.addEventListener("click", () => {
         categoryButtons.forEach(otherButton => {
-            otherButton.classList.remove("collapsed");
+            otherButton.classList.remove("collapsed", "active");
         });
         resetButton.setAttribute("disabled", "disabled");
         
         subcategoryContainer.innerHTML = ""; //clear existing subcategories
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const storyButtons = document.querySelectorAll(".story-button");
+
+    storyButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            // remove the previously added classes from all buttons
+            storyButtons.forEach(otherButton => {
+                otherButton.classList.remove("category-action-active");
+                otherButton.classList.remove("category-action-inactive");
+
+                // add class to clicked button
+                button.classList.add("category-action-active");
+
+                //apply different class to the other story buttons
+                storyButtons.forEach(otherButton => {
+                    if (otherButton!== button) {
+                        otherButton.classList.add("category-action-inactive");
+                    }
+                })
+            });
+        });
     });
 });
 
